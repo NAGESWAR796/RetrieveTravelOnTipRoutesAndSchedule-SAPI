@@ -1,0 +1,14 @@
+#%RAML 1.0 Library
+usage:
+
+traits:
+  transactionId: !include common/traits/headerTransationIDTrait.raml
+  departureLocationCode: !include /library/schedules/traits/departureLocationCodeTrait.raml
+  destinationLocationCode: !include /library/schedules/traits/destinationLocationCodeTrait.raml
+
+
+types:
+  200ResponseForTravelOnTipRoutsDataTypes: !include /library/Routs/dataTypes/200ResponseForTravelOnTipRoutesDataType.raml
+  200ResponseForTravelOnTipScheduleDataType: !include /library/schedules/dataTypes/200ResponseForTravelOnTipScheduleDataType.raml
+  
+
