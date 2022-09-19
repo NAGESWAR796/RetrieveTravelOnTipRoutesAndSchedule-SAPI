@@ -1,0 +1,19 @@
+[{
+		"companyName": "COMPANY",
+		"originLocation_locationCode": "ORGINLOCATIONCODE",
+		"destinationLocation_locationCode": "DESTINATIONLOCATION",
+		"SERVICETYPE": "SERVICETYPE"
+	},
+	{
+		"companyName": "COMPANY",
+		"originLocation_locationCode": "ORGINLOCATIONCODE",
+		"destinationLocation_locationCode": "DESTINATIONLOCATION",
+		"SERVICETYPE": "SERVICETYPE"
+	},
+	{
+		"companyName": "COMPANY",
+		"originLocation_locationCode": "ORGINLOCATIONCODE",
+		"destinationLocation_locationCode": "DESTINATIONLOCATION",
+		"SERVICETYPE": "SERVICETYPE"
+	}
+]

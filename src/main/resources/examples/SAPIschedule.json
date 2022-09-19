@@ -1,0 +1,25 @@
+[{
+		"companyName": "COMPANY",
+		"travelRoute_originLocation_locationCode": "ORGINLOCATIONCODE",
+		"travelRoute_destinationLocation_locationCode": "DESTINATIONLOCATION",
+		"availableSeats": "AVAILABLESEATS",
+		"departureDateTime": "DATETIME",
+		"servicetype": "SERVICETYPE"
+	},
+	{
+		"companyName": "COMPANY",
+		"travelRoute_originLocation_locationCode": "ORGINLOCATIONCODE",
+		"travelRoute_destinationLocation_locationCode": "DESTINATIONLOCATION",
+		"availableSeats": "AVAILABLESEATS",
+		"departureDateTime": "DATETIME",
+		"servicetype": "SERVICETYPE"
+	},
+	{
+		"companyName": "COMPANY",
+		"travelRoute_originLocation_locationCode": "ORGINLOCATIONCODE",
+		"travelRoute_destinationLocation_locationCode": "DESTINATIONLOCATION",
+		"availableSeats": "AVAILABLESEATS",
+		"departureDateTime": "DATETIME",
+		"servicetype": "SERVICETYPE"
+	}
+]

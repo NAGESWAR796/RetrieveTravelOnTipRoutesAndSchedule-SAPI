@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<flow name="retriveRoutesFromTravelOnTip-SAPIFlow" doc:id="79cafbff-056a-4ad1-828d-285f2deb045d" >
+		<logger level="INFO" doc:name="Logger" doc:id="311c0ede-9126-4746-ac0a-f1e58bfd6979" message='"Request sent to Routes TravelOnTip SAPI for transation id :" #[vars.transactionId]'/>
+		<http:request method="GET" doc:name="Request" doc:id="ac6909c1-adb5-4608-acb9-8f50eda27470" config-ref="HTTP_Request_configuration" path="${secure::http.requester.Path}">
+			<http:headers ><![CDATA[#[output application/java
+---
+{
+	transactionId : vars.transactionId
+}]]]></http:headers>
+			<http:uri-params ><![CDATA[#[output application/java
+---
+{
+	sType : vars.sType
+}]]]></http:uri-params>
+		</http:request>
+		<ee:transform doc:name="Transform Message" doc:id="f9718cbb-6814-411d-ab7a-82593483d955" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+payload map(value, index)->{
+	originLocation: {
+		locationCode: value.originLocation_locationCode
+	},
+	destinationLocation: {
+		locationCode: value.destinationLocation_locationCode
+	}
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="41806bd0-f11c-4216-9e5c-fb8c3e297daa" message='"Request sent to Routes TravelOnTip SAPI for transation id :" #[vars.transactionId] #[payload]'/>
+	</flow>
+</mule>
