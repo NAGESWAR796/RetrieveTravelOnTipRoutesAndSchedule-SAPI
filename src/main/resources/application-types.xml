@@ -330,4 +330,5 @@ type scheduleIN = Array<{|  companyName: String,   travelRoute_originLocation_lo
       </types:input-event>
     </types:processor-declaration>
   </types:enrichment>
+  <types:enrichment select="#7dc0f3ca-8ea8-41e2-999d-051902879027"/>
 </types:mule>

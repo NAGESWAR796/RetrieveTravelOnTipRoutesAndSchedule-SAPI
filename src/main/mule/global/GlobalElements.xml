@@ -16,5 +16,6 @@ http://www.mulesoft.org/schema/mule/secure-properties http://www.mulesoft.org/sc
 	<http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="70fe54e0-435e-48c9-b7ab-6592783cfd81" >
 		<http:request-connection host="${secure::http.requester.host}" port="${secure::http.requester.port}" />
 	</http:request-config>
+	<configuration doc:name="Configuration" doc:id="398c80c4-7cce-47a5-9644-a651d782e816" defaultErrorHandler-ref="GlobelError_Handler" />
 	
 </mule>
