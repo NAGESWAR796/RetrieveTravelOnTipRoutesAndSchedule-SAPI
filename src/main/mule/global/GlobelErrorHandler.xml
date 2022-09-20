@@ -76,7 +76,7 @@ output application/json
 			<ee:transform doc:name="Transform Message" doc:id="b65192ed-36db-4513-a77a-f1a1b1863291" >
 				<ee:message >
 					<ee:set-payload ><![CDATA[%dw 2.0
-output application/java
+output application/json
 ---
 {
 	"Message":"HTTP:CONNECTIVITY"
@@ -88,7 +88,7 @@ output application/java
 			<ee:transform doc:name="Transform Message" doc:id="4805bc0b-ad7a-43b9-a5d2-383706245eb0" >
 				<ee:message >
 					<ee:set-payload ><![CDATA[%dw 2.0
-output application/java
+output application/json
 ---
 {
 	"MESSAGE":"HTTP:INTERNAL SERVER ERROR"
@@ -113,7 +113,7 @@ output application/json
 			<ee:transform doc:name="Transform Message" doc:id="ae417f15-d1f9-4408-91c5-fe1b1d889a51" >
 				<ee:message >
 					<ee:set-payload ><![CDATA[%dw 2.0
-output application/java
+output application/json
 ---
 {
 	"error":"critical error"
